@@ -6,8 +6,10 @@ import java.io.InputStreamReader;
 public class ConnectPython {
 
     public void connect() {
+        String userDir = System.getProperty("user.dir");
         try {
-            ProcessBuilder pd = new ProcessBuilder("python", "50percentwork\\scripts\\percent50.py");
+            java.nio.file.Path scriptPath = java.nio.file.Paths.get(userDir, "50percentwork", "scripts", "percent50.py");
+            ProcessBuilder pd = new ProcessBuilder("python", scriptPath.toString());
             Process process = pd.start();
 
             // Read Python standard output
