@@ -7,7 +7,7 @@ public class ConnectPython {
 
     public void connect() {
         try {
-            ProcessBuilder pd = new ProcessBuilder("python", "ToDoList-main\\50percentwork\\scripts\\percent50.py");
+            ProcessBuilder pd = new ProcessBuilder("python", "50percentwork\\scripts\\percent50.py");
             Process process = pd.start();
 
             // Read Python standard output
