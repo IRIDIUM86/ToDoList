@@ -7,6 +7,7 @@ import java.awt.Dimension;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+
 public class ChatPanel extends JPanel {
     public ChatPanel(){
 
@@ -25,6 +26,7 @@ public class ChatPanel extends JPanel {
 
         // draw the functionalities
         drawMessageBar();
+        drawChatHistory();
         
     }
 
@@ -34,4 +36,9 @@ public class ChatPanel extends JPanel {
         this.add(mb, BorderLayout.SOUTH);
     }
 
+    private void drawChatHistory(){
+        ChatArea ca = new ChatArea();
+
+        this.add(ca, BorderLayout.CENTER);
+    }
 }

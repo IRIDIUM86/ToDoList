@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+
 public class FilePanel extends JPanel{
     public FilePanel(){
         // Create Child Panel
