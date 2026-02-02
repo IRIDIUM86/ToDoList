@@ -51,7 +51,7 @@ public class MessageBar extends JPanel {
         });
     }
 
-    // 3. Allow other classes to attach the listener
+    // Allow other classes to attach the listener
     public void setOnSendListener(MessageListener listener) {
         this.listener = listener;
     }
