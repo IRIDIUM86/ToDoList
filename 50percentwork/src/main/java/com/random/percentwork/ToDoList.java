@@ -23,6 +23,7 @@ public class ToDoList extends JPanel {
 
 
         // ---------- TO DO LIST (Hard Code)----------
+
         JPanel listPanel = new JPanel();
         listPanel.setLayout(new BoxLayout(listPanel, BoxLayout.Y_AXIS));
 
@@ -35,17 +36,23 @@ public class ToDoList extends JPanel {
         taskRow.add(checkBox);
         taskRow.add(timeLabel);
         taskRow.add(taskLabel);
-        
+                
         listPanel.add(taskRow);
-        
 
+        setupListScroller(listPanel);
+        
 
         // ---------- BUTTON ACTION ----------
         ml = new ManageList();
 
         // ---------- LAYOUT ----------
         add(inputPanel, BorderLayout.NORTH);
-        add(listPanel, BorderLayout.CENTER);
         add(ml, BorderLayout.SOUTH);
+    }
+
+private void setupListScroller(JPanel taskRow) {
+    JScrollPane fileChoiceScroll = new JScrollPane(taskRow);
+    fileChoiceScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+    this.add(fileChoiceScroll, BorderLayout.CENTER);
     }
 }
