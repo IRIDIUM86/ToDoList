@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -28,10 +29,18 @@ public class FileAction extends JPanel{
         addFileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    System.out.println("Add button is working");
-                }
-            }
-        );
+            
+            // Find the window
+            Frame parentFrame = (Frame) javax.swing.SwingUtilities.getWindowAncestor(FileAction.this);
+        
+            // Open the dialog
+            NewToDoList dialog = new NewToDoList(parentFrame);
+            dialog.setVisible(true);
+        
+            // Logic resumes here after dialog closes
+            System.out.println("Dialog closed!");
+        }
+    });
 
         openFileButton.addActionListener(new ActionListener() {
             @Override
