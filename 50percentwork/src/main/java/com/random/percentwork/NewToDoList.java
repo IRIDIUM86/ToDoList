@@ -11,6 +11,7 @@ public class NewToDoList extends JDialog{
 
         this.setSize(300,150);
         this.setLayout(new FlowLayout());
-        this.add(new javax.swing.JLabel("Enter Date:"));
+       
+
     }
 }
